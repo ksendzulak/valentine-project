@@ -1,0 +1,56 @@
+/* Define project variables */
+:root{
+    --light-color: rgb(251, 252, 255);
+    --primary-color: rgb(187, 20, 84);
+    --accent-color: rgb(243, 145, 182);
+}
+/* Project font */
+@font-face {
+    font-family: mainFont;
+    src: url(includes/fonts/Rubik-VariableFont_wght.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: mainFont;
+}
+body{
+    background-image: linear-gradient(to bottom right, var(--primary-color), rgb(147, 20, 84));
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+h1{
+    color: var(--light-color);
+    font-size: 3rem;
+    opacity: 0;
+}
+.textAnimation{
+    animation-name: textAnimation;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+
+/* Animation setup */
+@keyframes textAnimation {
+    0%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    25%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    75%{
+        transform: translateY(-0%);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
