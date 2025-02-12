@@ -27,6 +27,7 @@ h1{
     color: var(--light-color);
     font-size: 3rem;
     opacity: 0;
+    text-align: center;
 }
 .textAnimation{
     animation-name: textAnimation;
@@ -53,4 +54,57 @@ h1{
         transform: translateY(100%);
         opacity: 0;
     }
+}
+
+form{
+    background-color: var(--accent-color);
+    width: clamp(200px, 75vw, 1000px);
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 24px;
+    border-radius: 16px;
+    gap: 32px;
+    box-shadow: 0 8px 8px rgb(0, 0, 0, 0.25);
+    cursor: default;
+    display: grid;
+    animation: formIn 0.5s ease-in-out 1s;
+}
+@keyframes formIn {
+    from{
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.formHeading{
+    opacity: 1;
+    font-size: 2rem;
+}
+.name{
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: text;
+    color: var(--primary-color);
+}
+.submitBtn{
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    border: none;
+    font-family: mainFont;
+    font-weight: 500;
+    font-size: 1rem;
+    width: fit-content;
+    border-radius: 8px;
+    padding: 8px 24px;
+    justify-self: center;
+    cursor: pointer;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.25);
 }
